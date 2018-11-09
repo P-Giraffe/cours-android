@@ -2,6 +2,7 @@ package fr.purplegiraffe.blocnote
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addButtonTouched(button:View) {
-        
+        Log.i("Maxime", "Coucou à tous !")
     }
 }
 
