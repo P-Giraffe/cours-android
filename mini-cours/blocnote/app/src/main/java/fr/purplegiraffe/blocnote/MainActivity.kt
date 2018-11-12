@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addButtonTouched(button:View) {
-        Log.i("Maxime", "Coucou à tous !")
+        fullTextView.text = "Bazinga !"
     }
 }
 
