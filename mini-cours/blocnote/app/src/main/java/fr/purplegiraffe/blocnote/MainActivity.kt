@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
     fun addButtonTouched(button:View) {
         val userInput = userField.text
         val existingText = fullTextView.text
-        fullTextView.text = "$existingText $userInput"
+        fullTextView.text = "$existingText\n$userInput"
+        userField.text = null
     }
 }
 
