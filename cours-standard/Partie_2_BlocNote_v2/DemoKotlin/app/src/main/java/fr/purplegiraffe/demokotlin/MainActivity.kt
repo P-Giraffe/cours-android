@@ -6,6 +6,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    var fullname = "John Doe"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,7 +16,11 @@ class MainActivity : AppCompatActivity() {
     fun goButtonTouched(button:View) {
         val firstname = firstnameField.text
         val lastname = lastnameField.text
-        val fullname = "${firstname} ${lastname}"
+        fullname = "${firstname} ${lastname}"
+        resultView.text = "Bonjour ${fullname}"
+    }
+
+    fun clearButtonTouched(button:View) {
         resultView.text = "Bonjour ${fullname}"
     }
 }
