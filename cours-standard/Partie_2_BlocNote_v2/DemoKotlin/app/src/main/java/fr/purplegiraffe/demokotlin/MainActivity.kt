@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val preferencesReader = getSharedPreferences("fr.purplegiraffe.demokotlin", Context.MODE_PRIVATE)
+        fullname = preferencesReader.getString("User fullname", "")
+        welcomeUser()
     }
 
     fun goButtonTouched(button:View) {
