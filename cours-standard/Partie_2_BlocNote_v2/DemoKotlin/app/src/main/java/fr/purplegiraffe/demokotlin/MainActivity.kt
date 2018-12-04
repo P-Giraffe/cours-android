@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     fun goButtonTouched(button:View) {
         val firstname = firstnameField.text
         val lastname = lastnameField.text
+        val champTextePrenom = firstnameField
+        champTextePrenom.append("Bazinga!")
         fullname = "${firstname} ${lastname}"
         resultView.text = "Bonjour ${fullname}"
     }
