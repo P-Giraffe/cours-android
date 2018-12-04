@@ -19,10 +19,16 @@ class MainActivity : AppCompatActivity() {
         val champTextePrenom = firstnameField
         champTextePrenom.append("Bazinga!")
         fullname = "${firstname} ${lastname}"
-        resultView.text = "Bonjour ${fullname}"
+        welcomeUser()
     }
 
     fun clearButtonTouched(button:View) {
+        welcomeUser()
+    }
+
+    fun welcomeUser() {
         resultView.text = "Bonjour ${fullname}"
+        firstnameField.setText("")
+        lastnameField.setText("")
     }
 }
