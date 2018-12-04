@@ -6,7 +6,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var fullname = "John Doe"
+    var fullname = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,18 +16,25 @@ class MainActivity : AppCompatActivity() {
     fun goButtonTouched(button:View) {
         val firstname = firstnameField.text
         val lastname = lastnameField.text
-        val champTextePrenom = firstnameField
-        champTextePrenom.append("Bazinga!")
-        fullname = "${firstname} ${lastname}"
+        if (firstname.length > 0 && lastname.length > 0) {
+            fullname = "${firstname} ${lastname}"
+        } else {
+            fullname = ""
+        }
         welcomeUser()
     }
 
     fun clearButtonTouched(button:View) {
+        fullname = ""
         welcomeUser()
     }
 
     fun welcomeUser() {
-        resultView.text = "Bonjour ${fullname}"
+        if (fullname.length > 0) {
+            resultView.text = "Bonjour ${fullname}"
+        } else {
+            resultView.text = "Saisissez d'abord votre nom et votre prénom puis appuyez sur 'Go'"
+        }
         firstnameField.setText("")
         lastnameField.setText("")
     }
