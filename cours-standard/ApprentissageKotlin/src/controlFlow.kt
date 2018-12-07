@@ -1,5 +1,11 @@
 fun main(args: Array<String>) {
-
+    val age = 17
+    when (age) {
+        in 0..17 -> print("Vous êtes mineur(e)")
+        18 -> print("Vous venez de devenir majeur(e) en france")
+        19,20 -> print("Vous allez bientôt devenir majeur(e) aux USA")
+        else -> print("Vous êtes majeur(e)")
+    }
 }
 
 fun ifelse() {
