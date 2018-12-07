@@ -1,5 +1,11 @@
 fun main(args: Array<String>) {
-    
+    var name:String? = null
+    var capitalizedName:String? = name?.capitalize()
+    if (name != null) {
+        print("${name} possède ${name.length} lettre(s)")
+    } else {
+        print("Votre prénom est vide ? :(")
+    }
 }
 
 fun valTypes() {
