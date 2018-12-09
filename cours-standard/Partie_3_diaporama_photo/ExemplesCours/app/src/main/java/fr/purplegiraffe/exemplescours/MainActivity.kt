@@ -1,6 +1,7 @@
 package fr.purplegiraffe.exemplescours
 
 import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -26,6 +27,14 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SettingsActivity::class.java)
         intent.putExtra("clickCount", clickCount)
         startActivity(intent)
+    }
+
+    fun purpleGiraffeButtonTouched(button:View) {
+        val webpage: Uri = Uri.parse("https://www.purplegiraffe.fr")
+        val intent = Intent(Intent.ACTION_VIEW, webpage)
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
     fun updateDisplay() {
