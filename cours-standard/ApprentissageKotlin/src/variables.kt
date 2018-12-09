@@ -1,7 +1,12 @@
 fun main(args: Array<String>) {
-    var name:String? = null
-    val notNullName:String = name ?: "Dinesh Chugtai"
+
+}
+
+fun nullableValues() {
+    val name:String? = null
     var capitalizedName:String? = name?.capitalize()
+    val notNullName:String = name ?: "Dinesh Chugtai"
+    val crazyNotNullName:String = name!!
     if (name != null) {
         print("${name} possède ${name.length} lettre(s)")
     } else {
