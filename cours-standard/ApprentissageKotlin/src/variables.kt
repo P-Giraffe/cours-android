@@ -1,5 +1,6 @@
 fun main(args: Array<String>) {
     var name:String? = null
+    val notNullName:String = name ?: "Dinesh Chugtai"
     var capitalizedName:String? = name?.capitalize()
     if (name != null) {
         print("${name} possède ${name.length} lettre(s)")
