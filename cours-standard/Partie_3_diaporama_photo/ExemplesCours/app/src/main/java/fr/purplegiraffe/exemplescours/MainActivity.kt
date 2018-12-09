@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     fun settingsButtonTouched(button:View) {
         val intent = Intent(this, SettingsActivity::class.java)
+        intent.putExtra("clickCount", clickCount)
         startActivity(intent)
     }
 
