@@ -1,5 +1,6 @@
 package fr.purplegiraffe.exemplescours
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -19,6 +20,11 @@ class MainActivity : AppCompatActivity() {
     fun buttonClick(button:View) {
         clickCount = clickCount + 1
         updateDisplay()
+    }
+
+    fun settingsButtonTouched(button:View) {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
     }
 
     fun updateDisplay() {
