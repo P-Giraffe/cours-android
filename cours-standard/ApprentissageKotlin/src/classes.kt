@@ -12,6 +12,11 @@ fun main(args: Array<String>) {
 
     p1.printYourself()
     p2.printYourself()
+
+    p2.receiveHit(50)
+    p2.printYourself()
+    p2.receiveHit(10)
+    p2.printYourself()
 }
 
 class Player (val nickname:String) {
@@ -20,5 +25,10 @@ class Player (val nickname:String) {
 
     fun printYourself() {
         println("${this.nickname} | Score : ${this.score} | Santé : ${this.health}")
+    }
+
+    fun receiveHit(hitPower:Int) {
+        println("Ouch!")
+        this.health = this.health - hitPower
     }
 }
