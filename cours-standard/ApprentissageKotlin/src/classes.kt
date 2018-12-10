@@ -7,15 +7,14 @@ fun main(args: Array<String>) {
     val p1 = Player("Sheldon")
     val p2 = Player("Leonard")
 
-    p1.score = 10
-    p2.score = 20
-
     p1.printYourself()
     p2.printYourself()
 
-    p2.receiveHit(50)
+    p1.hit(p2, 50)
+    p1.printYourself()
     p2.printYourself()
-    p2.receiveHit(10)
+    p2.hit(p1, 40)
+    p1.printYourself()
     p2.printYourself()
 }
 
@@ -28,7 +27,12 @@ class Player (val nickname:String) {
     }
 
     fun receiveHit(hitPower:Int) {
-        println("Ouch!")
+        println("${this.nickname} : Ouch!")
         this.health = this.health - hitPower
+    }
+
+    fun hit(player:Player, hitPower:Int) {
+        player.receiveHit(hitPower)
+        this.score = this.score + hitPower
     }
 }
