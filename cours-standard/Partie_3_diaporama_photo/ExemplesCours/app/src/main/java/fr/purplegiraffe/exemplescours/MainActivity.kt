@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         Log.i("ActivityLifecycle", "onCreate")
     }
 
+    fun sushiButtonTouched(sushiButton:View) {
+        imageView.setImageResource(R.drawable.sushi)
+    }
+
     fun buttonClick(button:View) {
         clickCount = clickCount + 1
         updateDisplay()
