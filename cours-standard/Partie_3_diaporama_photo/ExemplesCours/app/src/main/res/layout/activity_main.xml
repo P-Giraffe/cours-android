@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent" android:id="@+id/textView"
             app:layout_constraintVertical_bias="0.76"/>
     <Button
-            android:text="Compteur"
+            android:text="@string/counter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button" android:layout_marginTop="8dp"
@@ -25,7 +25,7 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:onClick="buttonClick"/>
     <Button
-            android:text="Réglages"
+            android:text="@string/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button2" android:layout_marginBottom="8dp"
@@ -49,7 +49,7 @@
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/button3"
             android:scaleType="centerCrop"/>
     <Button
-            android:text="Afficher Sushi"
+            android:text="@string/show_sushi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button4" app:layout_constraintStart_toStartOf="parent"
