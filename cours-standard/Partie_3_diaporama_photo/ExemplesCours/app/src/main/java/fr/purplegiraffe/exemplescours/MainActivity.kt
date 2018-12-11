@@ -42,7 +42,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateDisplay() {
-        textView.text = "${clickCount} clic(s)"
+        if (clickCount == 0) {
+            textView.text = getString(R.string.no_click)
+        } else {
+            textView.text = getString(R.string.click_count, clickCount)
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {

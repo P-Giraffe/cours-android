@@ -3,4 +3,6 @@
     <string name="show_sushi">Afficher Sushi</string>
     <string name="settings">Réglages</string>
     <string name="counter">Compteur</string>
+    <string name="no_click">Aucun clic</string>
+    <string name="click_count">%1$d clic(s)</string>
 </resources>
