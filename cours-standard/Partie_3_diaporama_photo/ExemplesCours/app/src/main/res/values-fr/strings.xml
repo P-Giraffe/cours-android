@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExemplesCours</string>
+    <string name="show_sushi">Afficher Sushi</string>
+    <string name="settings">Réglages</string>
+    <string name="counter">Compter</string>
+    <string name="no_click">Aucun clic</string>
+    <string name="click_count">%1$d clic(s)</string>
+</resources>
