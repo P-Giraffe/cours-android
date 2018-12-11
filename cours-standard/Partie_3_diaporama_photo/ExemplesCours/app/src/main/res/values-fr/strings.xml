@@ -6,4 +6,8 @@
     <string name="counter">Compter</string>
     <string name="no_click">Aucun clic</string>
     <string name="click_count">%1$d clic(s)</string>
+    <plurals name="click_count_p">
+        <item quantity="one">%1$d clic</item>
+        <item quantity="other">%1$d clics</item>
+    </plurals>
 </resources>

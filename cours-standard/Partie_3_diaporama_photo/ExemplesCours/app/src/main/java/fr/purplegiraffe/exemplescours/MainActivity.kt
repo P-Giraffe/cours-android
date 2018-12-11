@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             textView.text = getString(R.string.no_click)
         } else {
             textView.text = getString(R.string.click_count, clickCount)
+            textView.text = resources.getQuantityString(R.plurals.click_count_p, clickCount, clickCount)
         }
     }
 
