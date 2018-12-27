@@ -14,7 +14,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:scaleType="centerCrop"/>
     <Button
-            android:text="Précédente"
+            android:text="@string/previous"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button" app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
             android:onClick="previousButtonTouched"/>
     <Button
-            android:text="Suivante"
+            android:text="@string/next"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
