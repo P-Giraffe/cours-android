@@ -15,7 +15,11 @@ class SlideshowActivity : AppCompatActivity() {
     }
 
     fun previousButtonTouched(button:View) {
-
+        currentPhotoIndex = currentPhotoIndex - 1
+        if (currentPhotoIndex < 0) {
+            currentPhotoIndex = photoList.size - 1
+        }
+        imageView.setImageResource(photoList[currentPhotoIndex])
     }
 
     fun nextButtonTouched(button: View) {
