@@ -6,6 +6,9 @@ fun main(args: Array<String>) {
 
     val p1 = Player("Sheldon")
     val p2 = Player("Leonard")
+    val bowser = Bot(100)
+    bowser.receiveHit(10)
+    println(bowser.health)
 
     p1.printYourself()
     p2.printYourself()
@@ -18,17 +21,23 @@ fun main(args: Array<String>) {
     p2.printYourself()
 }
 
-class Player (val nickname:String) {
-    var score:Int = 0
+open class Person {
     var health:Int = 100
+
+    fun receiveHit(hitPower:Int) {
+        this.health = this.health - hitPower
+    }
+}
+
+class Bot (val strength:Int) : Person() {
+
+}
+
+class Player (val nickname:String) : Person() {
+    var score:Int = 0
 
     fun printYourself() {
         println("${this.nickname} | Score : ${this.score} | Santé : ${this.health}")
-    }
-
-    fun receiveHit(hitPower:Int) {
-        println("${this.nickname} : Ouch!")
-        this.health = this.health - hitPower
     }
 
     fun hit(player:Player, hitPower:Int) {
