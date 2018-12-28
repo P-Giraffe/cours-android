@@ -28,6 +28,11 @@ fun main(args: Array<String>) {
     } else {
         println("Match nul…")
     }
+
+    val obstacle = object : Person() {
+        val size = 200
+    }
+    obstacle.receiveHit(10)
 }
 
 open class Person {
