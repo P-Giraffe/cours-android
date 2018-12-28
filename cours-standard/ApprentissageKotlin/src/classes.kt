@@ -42,8 +42,8 @@ class Player (val nickname:String) : Person() {
     }
 
     override fun receiveHit(hitPower: Int) {
+        super.receiveHit(hitPower)
         println("${this.nickname} : Ouch!")
-        this.health = this.health - hitPower
     }
 
     fun hit(player:Player, hitPower:Int) {
