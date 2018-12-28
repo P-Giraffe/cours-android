@@ -17,9 +17,17 @@ fun main(args: Array<String>) {
     p1.hit(p2, 50)
     p1.printYourself()
     p2.printYourself()
-    p2.hit(p1, 40)
+    p2.hit(p1, 60)
     p1.printYourself()
     p2.printYourself()
+
+    if (p1 > p2) {
+        println("${p1.nickname} a gagné")
+    } else if (p2 > p1) {
+        println("${p2.nickname} a gagné")
+    } else {
+        println("Match nul…")
+    }
 }
 
 open class Person {
@@ -34,7 +42,7 @@ class Bot (val strength:Int) : Person() {
 
 }
 
-class Player (val nickname:String) : Person() {
+class Player (val nickname:String) : Person(), Comparable<Player> {
     var score:Int = 0
 
     fun printYourself() {
@@ -49,5 +57,9 @@ class Player (val nickname:String) : Person() {
     fun hit(player:Player, hitPower:Int) {
         player.receiveHit(hitPower)
         this.score = this.score + hitPower
+    }
+
+    override fun compareTo(other: Player): Int {
+        return this.score - other.score
     }
 }
