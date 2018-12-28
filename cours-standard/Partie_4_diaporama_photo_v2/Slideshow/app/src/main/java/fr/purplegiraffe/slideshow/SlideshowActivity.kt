@@ -22,15 +22,24 @@ class SlideshowActivity : AppCompatActivity() {
     }
 
     fun previousButtonTouched(button:View) {
+        stopSlideshow()
         currentPhotoIndex = currentPhotoIndex - 1
         if (currentPhotoIndex < 0) {
             currentPhotoIndex = photoList.size - 1
         }
         imageView.setImageResource(photoList[currentPhotoIndex])
+        startSlideshow()
     }
 
     fun nextButtonTouched(button: View) {
+        stopSlideshow()
         showNextPhoto()
+        startSlideshow()
+    }
+
+    fun stopSlideshow() {
+        countDownTimer?.cancel()
+        countDownTimer = null
     }
 
     fun startSlideshow() {
