@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
     val p2 = Player("Leonard")
     val bowser = Bot(100)
     bowser.receiveHit(10)
+    p1.receiveHit(10)
     println(bowser.health)
 
     p1.printYourself()
@@ -24,7 +25,7 @@ fun main(args: Array<String>) {
 open class Person {
     var health:Int = 100
 
-    fun receiveHit(hitPower:Int) {
+    open fun receiveHit(hitPower:Int) {
         this.health = this.health - hitPower
     }
 }
@@ -38,6 +39,11 @@ class Player (val nickname:String) : Person() {
 
     fun printYourself() {
         println("${this.nickname} | Score : ${this.score} | Santé : ${this.health}")
+    }
+
+    override fun receiveHit(hitPower: Int) {
+        println("${this.nickname} : Ouch!")
+        this.health = this.health - hitPower
     }
 
     fun hit(player:Player, hitPower:Int) {
