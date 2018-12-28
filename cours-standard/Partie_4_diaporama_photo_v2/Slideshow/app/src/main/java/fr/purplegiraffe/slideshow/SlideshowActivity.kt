@@ -61,4 +61,15 @@ class SlideshowActivity : AppCompatActivity() {
         }
         imageView.setImageResource(photoList[currentPhotoIndex])
     }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putInt("currentPhotoIndex", currentPhotoIndex)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        currentPhotoIndex = savedInstanceState?.getInt("currentPhotoIndex") ?: 0
+        imageView.setImageResource(photoList[currentPhotoIndex])
+    }
 }
