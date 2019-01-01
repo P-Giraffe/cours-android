@@ -3,6 +3,8 @@ package fr.purplegiraffe.slideshow
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_slideshow.*
 
@@ -71,5 +73,23 @@ class SlideshowActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         currentPhotoIndex = savedInstanceState?.getInt("currentPhotoIndex") ?: 0
         imageView.setImageResource(photoList[currentPhotoIndex])
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item != null) {
+            when (item.itemId) {
+                R.id.settings_button -> displaySettings()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    fun displaySettings() {
+
     }
 }
