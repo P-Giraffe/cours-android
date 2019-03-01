@@ -24,6 +24,11 @@ class SlideshowActivity : AppCompatActivity() {
         startSlideshow()
     }
 
+    override fun onStop() {
+        super.onStop()
+        stopSlideshow()
+    }
+
     fun previousButtonTouched(button:View) {
         stopSlideshow()
         currentPhotoIndex = currentPhotoIndex - 1
@@ -46,7 +51,8 @@ class SlideshowActivity : AppCompatActivity() {
     }
 
     fun startSlideshow() {
-        countDownTimer = object : CountDownTimer(3000,3000) {
+        val delay = (LocalPreferences(this).slideshowDelay * 1000).toLong()
+        countDownTimer = object : CountDownTimer(delay,delay) {
             override fun onFinish() {
                 showNextPhoto()
                 startSlideshow()
