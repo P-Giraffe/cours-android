@@ -29,6 +29,13 @@ fun main(args: Array<String>) {
         println("Match nul…")
     }
 
+    if (p1.isAlive) {
+        println("Bravo ${p1.nickname}")
+        p1.isAlive = false
+    } else {
+        p1.isAlive = true
+    }
+
     val obstacle = object : Person() {
         val size = 200
     }
@@ -37,6 +44,16 @@ fun main(args: Array<String>) {
 
 open class Person {
     var health:Int = 100
+
+    var isAlive:Boolean
+        get() { return health > 0 }
+        set(value) {
+            if (value == true) {
+                health = 100
+            } else {
+                health = 0
+            }
+        }
 
     open fun receiveHit(hitPower:Int) {
         this.health = this.health - hitPower
