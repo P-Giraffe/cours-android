@@ -1,5 +1,6 @@
 package fr.purplegiraffe.slideshow
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -90,6 +91,7 @@ class SlideshowActivity : AppCompatActivity() {
     }
 
     fun displaySettings() {
-
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
     }
 }
