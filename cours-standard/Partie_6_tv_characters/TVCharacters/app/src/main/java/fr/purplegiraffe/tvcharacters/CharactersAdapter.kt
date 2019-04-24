@@ -17,16 +17,23 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         Character("Charlie Harper", "Two and a Half Men"),
         Character("Allan Harper", "Two and a Half Men"),
         Character("Jake Harper", "Two and a Half Men"))
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // 1 - Charger la vue en XML
+
+        // 2 - Créer un viewholder pour contrôler cette vue
+
+        // 3 - retourner le viewholder
+        TODO()
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return _characterList.size
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // 1 - Obtenir le personnage
+        // 2 - Envoyer les infos du personnage dans le holder
     }
 
     class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
