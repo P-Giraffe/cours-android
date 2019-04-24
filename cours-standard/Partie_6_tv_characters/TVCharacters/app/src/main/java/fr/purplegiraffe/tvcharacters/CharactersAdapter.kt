@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.cell_character.view.*
 
 class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHolder>() {
     val _characterList = arrayOf(Character("Richard Hendricks", "Silicon Valley"),
@@ -24,9 +25,10 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         val rootView = LayoutInflater.from(parent.context).inflate(R.layout.cell_character,parent,false)
 
         // 2 - Créer un viewholder pour contrôler cette vue
+        val holder = CharacterViewHolder(rootView)
 
         // 3 - retourner le viewholder
-        TODO()
+        return holder
     }
 
     override fun getItemCount(): Int {
@@ -38,7 +40,8 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         // 2 - Envoyer les infos du personnage dans le holder
     }
 
-    class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView) {
+        val ui_title = rootView.ui_title
+        val ui_subtitle = rootView.ui_subtitle
     }
 }
