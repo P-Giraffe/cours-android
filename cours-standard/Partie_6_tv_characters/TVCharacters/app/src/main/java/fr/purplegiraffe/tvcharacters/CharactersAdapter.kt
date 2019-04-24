@@ -37,11 +37,19 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         // 1 - Obtenir le personnage
+        val character = _characterList[position]
+
         // 2 - Envoyer les infos du personnage dans le holder
+        holder.fillWithCharacter(character)
     }
 
     class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView) {
-        val ui_title = rootView.ui_title
-        val ui_subtitle = rootView.ui_subtitle
+        private val ui_title = rootView.ui_title
+        private val ui_subtitle = rootView.ui_subtitle
+
+        fun fillWithCharacter(character: Character) {
+            ui_title.text = character.name
+            ui_subtitle.text = character.show
+        }
     }
 }
