@@ -1,5 +1,6 @@
 package fr.purplegiraffe.tvcharacters
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,7 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
         // 1 - Charger la vue en XML
+        val rootView = LayoutInflater.from(parent.context).inflate(R.layout.cell_character,parent,false)
 
         // 2 - Créer un viewholder pour contrôler cette vue
 
