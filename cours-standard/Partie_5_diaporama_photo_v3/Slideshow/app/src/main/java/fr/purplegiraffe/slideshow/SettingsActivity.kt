@@ -1,5 +1,6 @@
 package fr.purplegiraffe.slideshow
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
@@ -10,6 +11,11 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         delaySeekbar.setOnSeekBarChangeListener(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        LocalPreferences(this).slideshowDelay = delaySeekbar.progress
     }
 
     override fun onStart() {
