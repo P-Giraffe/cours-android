@@ -43,13 +43,21 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         holder.fillWithCharacter(character)
     }
 
-    class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView) {
+    class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView), View.OnClickListener {
         private val ui_title = rootView.ui_title
+
         private val ui_subtitle = rootView.ui_subtitle
+        init {
+            rootView.setOnClickListener(this)
+        }
 
         fun fillWithCharacter(character: Character) {
             ui_title.text = character.name
             ui_subtitle.text = character.show
+        }
+
+        override fun onClick(v: View?) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
     }
 }
