@@ -1,8 +1,10 @@
 package fr.purplegiraffe.tvcharacters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.cell_character.view.*
 
@@ -19,6 +21,11 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         Character("Charlie Harper", "Two and a Half Men"),
         Character("Allan Harper", "Two and a Half Men"),
         Character("Jake Harper", "Two and a Half Men"))
+
+    fun onCharacterClick(index:Int, context:Context) {
+        val character = _characterList[index]
+        Toast.makeText(context, character.name, Toast.LENGTH_SHORT).show()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
         // 1 - Charger la vue en XML
@@ -43,10 +50,10 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         holder.fillWithCharacter(character)
     }
 
-    class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView), View.OnClickListener {
+    inner class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView), View.OnClickListener {
         private val ui_title = rootView.ui_title
-
         private val ui_subtitle = rootView.ui_subtitle
+
         init {
             rootView.setOnClickListener(this)
         }
@@ -57,7 +64,9 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         }
 
         override fun onClick(v: View?) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            if (v != null) {
+                onCharacterClick(adapterPosition, v.context)
+            }
         }
     }
 }
