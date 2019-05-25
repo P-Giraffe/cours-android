@@ -16,7 +16,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onAddButtonTouched(button:View) {
+        val dogName = ui_nameInput.text.toString()
+        if (dogName.isNotEmpty()) {
+            val dog = Dog()
+            dog.name = dogName
 
+            _realm.beginTransaction()
+            _realm.copyToRealm(dog)
+            _realm.commitTransaction()
+
+            ui_nameInput.text.clear()
+        }
     }
 
     fun loadDogsFromDataBase() {
