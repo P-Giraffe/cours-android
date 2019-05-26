@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import io.realm.Realm
+import io.realm.Sort
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.StringBuilder
 
@@ -29,12 +30,14 @@ class MainActivity : AppCompatActivity() {
 
             ui_nameInput.text.clear()
 
+            removeFirstDog()
+
             loadDogsFromDataBase()
         }
     }
 
-    fun loadDogsFromDataBase() {
-        val dogList = _realm.where(Dog::class.java).findAll()
+    private fun loadDogsFromDataBase() {
+        val dogList = _realm.where(Dog::class.java).sort("age",Sort.DESCENDING).findAll()
 
         val listBuilder = StringBuilder("Liste de chiens :\n")
         for (dog in dogList) {
@@ -54,5 +57,12 @@ class MainActivity : AppCompatActivity() {
         loadDogsFromDataBase()
     }
 
-
+    private fun removeFirstDog() {
+        val dogToRemove = _realm.where(Dog::class.java).sort("age",Sort.DESCENDING).findFirst()
+        if (dogToRemove != null) {
+            _realm.beginTransaction()
+            dogToRemove.deleteFromRealm()
+            _realm.commitTransaction()
+        }
+    }
 }
