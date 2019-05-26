@@ -38,9 +38,21 @@ class MainActivity : AppCompatActivity() {
 
         val listBuilder = StringBuilder("Liste de chiens :\n")
         for (dog in dogList) {
-            listBuilder.append("- ${dog.name}\n")
+            listBuilder.append("- ${dog.name}, ${dog.age} an${if (dog.age > 1) "s" else ""}\n")
         }
 
         ui_dataView.text = listBuilder.toString()
     }
+
+    fun onYearPassedButtonTouched(button: View) {
+        val dogList = _realm.where(Dog::class.java).findAll()
+        _realm.beginTransaction()
+        for (dog in dogList) {
+            dog.addYears(1)
+        }
+        _realm.commitTransaction()
+        loadDogsFromDataBase()
+    }
+
+
 }
