@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        person = Person("Max")
+        person = Person("Arya Stark")
         createLongString()
     }
 
