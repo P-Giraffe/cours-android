@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         person = Person("Arya Stark")
+        val p2 = Person()
         createLongString()
     }
 
