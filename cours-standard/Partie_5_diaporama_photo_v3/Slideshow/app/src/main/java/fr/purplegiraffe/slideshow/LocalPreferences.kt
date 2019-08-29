@@ -11,6 +11,7 @@ class LocalPreferences (context: Context){
             return sharedPreferences.getInt("slideshowDelay", 3)
         }
         set(value) {
-            sharedPreferences.edit().putInt("slideshowDelay", value).apply()
+            val finalValue = Math.max(2, Math.min(value, 4))
+            sharedPreferences.edit().putInt("slideshowDelay", finalValue).apply()
         }
 }

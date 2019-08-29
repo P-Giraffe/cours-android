@@ -21,11 +21,16 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     override fun onStart() {
         super.onStart()
         delaySeekbar.progress = LocalPreferences(this).slideshowDelay
+        updateDisplay()
     }
 
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-        delayText.text = "$progress s"
         LocalPreferences(this).slideshowDelay = progress
+        updateDisplay()
+    }
+
+    private fun updateDisplay() {
+        delayText.text = "${LocalPreferences(this).slideshowDelay} s"
     }
 
     override fun onStartTrackingTouch(seekBar: SeekBar?) {
