@@ -5,8 +5,8 @@ import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import io.realm.annotations.RealmClass
 
-class LocalDataManager() {
-    val realm = Realm.getDefaultInstance()
+class LocalDataManager {
+    private val realm = Realm.getDefaultInstance()
 
     fun saveShowAsFavorite(show: Show) {
         if (isShowInFavorites(show) == false) {

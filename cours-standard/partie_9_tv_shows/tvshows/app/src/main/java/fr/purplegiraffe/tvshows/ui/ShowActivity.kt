@@ -1,8 +1,8 @@
 package fr.purplegiraffe.tvshows.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import fr.purplegiraffe.tvshows.R
 import fr.purplegiraffe.tvshows.data.Show

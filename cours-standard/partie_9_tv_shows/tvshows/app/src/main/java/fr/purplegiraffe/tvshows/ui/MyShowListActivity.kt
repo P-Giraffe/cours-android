@@ -1,15 +1,10 @@
 package fr.purplegiraffe.tvshows.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.recyclerview.widget.LinearLayoutManager
 import fr.purplegiraffe.tvshows.R
-import fr.purplegiraffe.tvshows.data.Show
-import fr.purplegiraffe.tvshows.data.ShowsManager
-import kotlinx.android.synthetic.main.activity_show_list.*
 
 class MyShowListActivity : ShowListActivity() {
 

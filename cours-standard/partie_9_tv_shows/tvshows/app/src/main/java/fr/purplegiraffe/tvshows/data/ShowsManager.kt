@@ -3,8 +3,8 @@ package fr.purplegiraffe.tvshows.data
 import android.content.Context
 
 class ShowsManager(context:Context) {
-    val dataProvider:RemoteDataProvider = RemoteDataProvider(context)
-    var localDataManager:LocalDataManager = LocalDataManager()
+    private val dataProvider:RemoteDataProvider = RemoteDataProvider(context)
+    private val localDataManager:LocalDataManager = LocalDataManager()
 
     interface Client {
         fun receiveShowList(showList: List<Show>)

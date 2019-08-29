@@ -6,47 +6,11 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
-import java.lang.StringBuilder
 import java.net.URLEncoder
 
 class RemoteDataProvider(context: Context) {
-    enum class ApiUrls(val path: String) {
-        Popular("/tv/popular"),
-        SearchShow("/search/tv");
-
-        private val queryParameters = mutableMapOf<String,String>()
-
-        private val apiBaseUrl= "https://api.themoviedb.org/3"
-        private val theMovieDBApiKey = "206896aaebf4c97efc6b411932bb61f1"
-
-
-        fun buildURL(): String {
-            addUrlParameter("api_key",theMovieDBApiKey)
-
-            val builder = StringBuilder(apiBaseUrl)
-            builder.append(path)
-
-            for (entry in queryParameters) {
-                if (builder.contains("?")) {
-                    builder.append("&")
-                } else {
-                    builder.append("?")
-                }
-                builder.append(entry.key + "=" + URLEncoder.encode(entry.value, "UTF-8"))
-            }
-
-            return builder.toString()
-        }
-
-        fun addUrlParameter(key:String,value:String) : ApiUrls {
-            queryParameters[key] = value
-            return this
-        }
-    }
-
-
-    val requestQueue:RequestQueue = Volley.newRequestQueue(context)
-    val imageBaseUrl:String = "https://image.tmdb.org/t/p/w500/"
+    private val requestQueue:RequestQueue = Volley.newRequestQueue(context)
+    private val imageBaseUrl:String = "https://image.tmdb.org/t/p/w500/"
 
     fun getTopTVShows(resultHandler:(showList:List<Show>, error:String?)->Unit) {
         val request = JsonObjectRequest(ApiUrls.Popular.buildURL(), null, Response.Listener {
@@ -86,5 +50,39 @@ class RemoteDataProvider(context: Context) {
             }
         }
         return showList
+    }
+}
+
+enum class ApiUrls(val path: String) {
+    Popular("/tv/popular"),
+    SearchShow("/search/tv");
+
+    private val queryParameters = mutableMapOf<String,String>()
+
+    private val apiBaseUrl= "https://api.themoviedb.org/3"
+    private val theMovieDBApiKey = "206896aaebf4c97efc6b411932bb61f1"
+
+
+    fun buildURL(): String {
+        addUrlParameter("api_key",theMovieDBApiKey)
+
+        val builder = StringBuilder(apiBaseUrl)
+        builder.append(path)
+
+        for (entry in queryParameters) {
+            if (builder.contains("?")) {
+                builder.append("&")
+            } else {
+                builder.append("?")
+            }
+            builder.append(entry.key + "=" + URLEncoder.encode(entry.value, "UTF-8"))
+        }
+
+        return builder.toString()
+    }
+
+    fun addUrlParameter(key:String,value:String) : ApiUrls {
+        queryParameters[key] = value
+        return this
     }
 }

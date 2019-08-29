@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TVShows</string>
+    <string name="add_to_favorites">Ajouter aux favoris</string>
+    <string name="my_favorites">Mes favoris</string>
+    <string name="popular_shows">Séries Populaires</string>
+    <string name="remove_from_favorites">Retirer des favoris</string>
+    <string name="search">Rechercher</string>
+    <string name="add_show">Ajouter une série</string>
+</resources>

@@ -3,7 +3,6 @@ package fr.purplegiraffe.tvshows.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import fr.purplegiraffe.tvshows.R
 import fr.purplegiraffe.tvshows.data.Show
@@ -13,8 +12,9 @@ class ShowListAdapter(delegate:Delegate) : RecyclerView.Adapter<ShowListAdapter.
     interface Delegate {
         fun touchedShow(show:Show, index:Int)
     }
-    val delegate = delegate
-    var showList:List<Show> = listOf()
+    private val delegate = delegate
+    private var showList:List<Show> = listOf()
+
     fun reloadShowList(list:List<Show>) {
         showList = list
         notifyDataSetChanged()

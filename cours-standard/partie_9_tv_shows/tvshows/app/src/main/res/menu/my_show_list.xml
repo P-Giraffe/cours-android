@@ -4,6 +4,6 @@
 
     <item
         android:id="@+id/add_show"
-        android:title="Add show"
+        android:title="@string/add_show"
         app:showAsAction="always" />
 </menu>
