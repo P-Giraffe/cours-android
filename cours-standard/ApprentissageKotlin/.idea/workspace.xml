@@ -7,8 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d82a09-e465-4264-9067-c45f6fb89b46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data_class.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApprentissageKotlinV2/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApprentissageKotlinV2/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApprentissageKotlinV2/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApprentissageKotlinV2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApprentissageKotlinV2/app/src/main/java/fr/purplegiraffe/apprentissagekotlinv2/Classes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ApprentissageKotlinV2/app/src/main/java/fr/purplegiraffe/apprentissagekotlinv2/Executable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/app/src/main/java/fr/purplegiraffe/slideshow/LocalPreferences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/app/src/main/java/fr/purplegiraffe/slideshow/LocalPreferences.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/app/src/main/java/fr/purplegiraffe/slideshow/SettingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/app/src/main/java/fr/purplegiraffe/slideshow/SettingsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Partie_5_diaporama_photo_v3/Slideshow/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,24 +35,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/classes.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-965">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/data_class.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/inner_classes.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -46,11 +43,59 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/timers.kt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/classes.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/kotlinc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/variables.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -80,13 +125,13 @@
         <option value="$PROJECT_DIR$/src/variables.kt" />
         <option value="$PROJECT_DIR$/src/timers.kt" />
         <option value="$PROJECT_DIR$/src/demo.kt" />
-        <option value="$PROJECT_DIR$/src/classes.kt" />
         <option value="$PROJECT_DIR$/src/inner_classes.kt" />
         <option value="$PROJECT_DIR$/src/data_class.kt" />
+        <option value="$PROJECT_DIR$/src/classes.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="697" />
@@ -97,7 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,11 +155,15 @@
               <item name="ApprentissageKotlin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ApprentissageKotlin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Course" />
     </panes>
   </component>
@@ -135,7 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Data_classKt">
+  <component name="RunManager" selected="Kotlin.ClassesKt">
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -259,6 +308,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -267,18 +317,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.Unnamed" />
       <item itemvalue="Kotlin.ClassesKt" />
-      <item itemvalue="Kotlin.TimersKt" />
+      <item itemvalue="Kotlin.Data_classKt" />
       <item itemvalue="Kotlin.DemoKt" />
       <item itemvalue="Kotlin.Inner_classesKt" />
-      <item itemvalue="Kotlin.Data_classKt" />
+      <item itemvalue="Kotlin.TimersKt" />
+      <item itemvalue="Kotlin.Unnamed" />
       <item itemvalue="Kotlin script.Unnamed" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Data_classKt" />
         <item itemvalue="Kotlin.ClassesKt" />
+        <item itemvalue="Kotlin.Data_classKt" />
         <item itemvalue="Kotlin.Inner_classesKt" />
         <item itemvalue="Kotlin.DemoKt" />
         <item itemvalue="Kotlin.TimersKt" />
@@ -299,10 +349,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1280" height="697" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="697" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2025417" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15726767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -320,7 +369,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32561985" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32561985" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -360,13 +409,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/variables.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/arrays.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -382,9 +424,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demo.kt" />
+    <entry file="file://$PROJECT_DIR$/src/data_class.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/timers.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="232">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
@@ -396,17 +445,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes.kt">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/kotlinc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-965">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data_class.kt">
+    <entry file="file://$PROJECT_DIR$/src/variables.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>

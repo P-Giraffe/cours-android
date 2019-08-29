@@ -8,7 +8,7 @@ class Person(val name:String) {
     }
 
     constructor() : this("John Doe")
-    
+
 
     fun sayHello() {
         println("Hello my name is $name. Mon nom de famille est $familyName")

@@ -85,3 +85,12 @@ class Player (val nickname:String) : Person(), Comparable<Player> {
         return this.score - other.score
     }
 }
+
+
+
+
+
+
+
+
+
