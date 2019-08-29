@@ -13,17 +13,15 @@ class RemoteDataProvider(context: Context) {
     private val imageBaseUrl:String = "https://image.tmdb.org/t/p/w500/"
 
     fun getTopTVShows(resultHandler:(showList:List<Show>, error:String?)->Unit) {
-        val request = JsonObjectRequest(ApiUrls.Popular.buildURL(), null, Response.Listener {
-            val showList = parseShowListResponse(it)
-            resultHandler(showList, null)
-        }, Response.ErrorListener {
-            resultHandler(listOf(),it.localizedMessage)
-        })
-        requestQueue.add(request)
+        getShowListForURL(ApiUrls.Popular.buildURL(), resultHandler)
     }
 
     fun getTVShowsForQuery(query:String, resultHandler:(showList:List<Show>, error:String?)->Unit) {
-        val request = JsonObjectRequest(ApiUrls.SearchShow.addUrlParameter("query", query).buildURL(),null,
+        getShowListForURL(ApiUrls.SearchShow.addUrlParameter("query", query).buildURL(), resultHandler)
+    }
+
+    private fun getShowListForURL(url:String, resultHandler:(showList:List<Show>, error:String?)->Unit) {
+        val request = JsonObjectRequest(url,null,
             Response.Listener {
                 val showList = parseShowListResponse(it)
                 resultHandler(showList, null)
