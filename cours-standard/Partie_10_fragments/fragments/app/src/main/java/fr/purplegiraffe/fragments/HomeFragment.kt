@@ -31,7 +31,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun onButtonClick() {
-        findNavController().navigate(R.id.action_homeFragment_to_settingsFragment)
+        val direction = HomeFragmentDirections.actionHomeFragmentToSettingsFragment("Hello")
+        findNavController().navigate(direction)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

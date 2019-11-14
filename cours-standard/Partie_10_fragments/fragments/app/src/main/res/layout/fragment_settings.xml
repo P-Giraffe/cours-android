@@ -8,6 +8,7 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         style="@style/TextAppearance.AppCompat.Headline"
+        android:id="@+id/lbl_settings"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

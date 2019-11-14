@@ -18,5 +18,9 @@
         android:id="@+id/settingsFragment"
         android:name="fr.purplegiraffe.fragments.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <argument
+            android:name="customText"
+            app:argType="string" />
+    </fragment>
 </navigation>
