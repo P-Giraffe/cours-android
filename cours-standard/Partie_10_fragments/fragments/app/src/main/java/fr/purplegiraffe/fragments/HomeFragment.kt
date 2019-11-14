@@ -12,6 +12,9 @@ import kotlinx.android.synthetic.main.fragment_home.*
  * A simple [Fragment] subclass.
  */
 class HomeFragment : Fragment() {
+    interface HomeFragmentProtocol {
+        fun maSuperFonction()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,5 +31,11 @@ class HomeFragment : Fragment() {
 
     private fun onButtonClick() {
         lbl_hello.text = "Bonjour!"
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        val activity = activity as? HomeFragmentProtocol ?: return
+        activity.maSuperFonction()
     }
 }
