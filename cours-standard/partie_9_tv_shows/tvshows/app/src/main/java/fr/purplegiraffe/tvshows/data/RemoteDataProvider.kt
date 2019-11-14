@@ -10,7 +10,7 @@ import java.net.URLEncoder
 
 class RemoteDataProvider(context: Context) {
     private val requestQueue:RequestQueue = Volley.newRequestQueue(context)
-    private val imageBaseUrl:String = "https://image.tmdb.org/t/p/w500/"
+    private val imageBaseUrl:String = "https://image.tmdb.org/t/p/w780/"
 
     fun getTopTVShows(resultHandler:(showList:List<Show>, error:String?)->Unit) {
         getShowListForURL(ApiUrls.Popular.buildURL(), resultHandler)

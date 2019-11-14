@@ -15,7 +15,7 @@ class MyShowListActivity : ShowListActivity() {
 
     override fun onResume() {
         super.onResume()
-        dataManager.loadMyShowList(this)
+        showsManager.loadMyShowList(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

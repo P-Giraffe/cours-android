@@ -10,16 +10,16 @@ class TopShowListActivity : ShowListActivity() {
 
     private fun displayShowsMatching(query: String?) {
         if (query != null && query.length > 2) {
-            dataManager.loadShowListWithText(query,this)
+            showsManager.loadShowListWithText(query,this)
         } else {
-            dataManager.loadTopShowList(this)
+            showsManager.loadTopShowList(this)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         title = getString(R.string.popular_shows)
-        dataManager.loadTopShowList(this)
+        showsManager.loadTopShowList(this)
     }
 
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
@@ -37,7 +37,7 @@ class TopShowListActivity : ShowListActivity() {
             }
 
             override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-                dataManager.loadTopShowList(this@TopShowListActivity)
+                showsManager.loadTopShowList(this@TopShowListActivity)
                 return true
             }
         })

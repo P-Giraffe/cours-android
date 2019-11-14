@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val sharedPreferences = getSharedPreferences(SETTINGS_FILE_NAME, Context.MODE_PRIVATE)
-        fulltext = sharedPreferences.getString(FULLTEXT_SETTINGS_KEY, "")
+        fulltext = sharedPreferences.getString(FULLTEXT_SETTINGS_KEY, "") ?: ""
         fullTextView.text = fulltext
     }
 

@@ -40,7 +40,7 @@ class ShowListAdapter(delegate:Delegate) : RecyclerView.Adapter<ShowListAdapter.
 
     inner class ShowViewHolder(rootView: View):RecyclerView.ViewHolder(rootView),
         View.OnClickListener {
-        val textView = rootView.title
+        private val textView = rootView.title
 
         init {
             rootView.setOnClickListener(this)

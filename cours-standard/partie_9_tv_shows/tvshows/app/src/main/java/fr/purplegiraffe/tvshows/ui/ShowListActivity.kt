@@ -11,17 +11,22 @@ import fr.purplegiraffe.tvshows.data.ShowsManager
 import kotlinx.android.synthetic.main.activity_show_list.*
 
 open class ShowListActivity : AppCompatActivity(), ShowsManager.Client, ShowListAdapter.Delegate {
-    private val adapter = ShowListAdapter(this)
 
-    protected lateinit var dataManager : ShowsManager
+
+    private lateinit var adapter:ShowListAdapter
+    protected lateinit var showsManager : ShowsManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_list)
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        this.adapter = ShowListAdapter(this)
+        this.showsManager = ShowsManager(this)
+
         showListRecycler.layoutManager = LinearLayoutManager(this)
         showListRecycler.adapter = adapter
         showListRecycler.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
-        dataManager = ShowsManager(this)
     }
 
     //ShowsManager.Client Interface

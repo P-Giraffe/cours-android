@@ -1,6 +1,7 @@
 package fr.purplegiraffe.tvcharacters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,11 +36,14 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
         val holder = CharacterViewHolder(rootView)
 
         // 3 - retourner le viewholder
+        Log.i("LOG", "onCreateViewHolder")
         return holder
     }
 
     override fun getItemCount(): Int {
+        Log.i("LOG", "getItemCount")
         return _characterList.size
+
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
@@ -48,6 +52,8 @@ class CharactersAdapter : RecyclerView.Adapter<CharactersAdapter.CharacterViewHo
 
         // 2 - Envoyer les infos du personnage dans le holder
         holder.fillWithCharacter(character)
+        Log.i("LOG", "onBindViewHolder : ${position}")
+
     }
 
     inner class CharacterViewHolder(rootView: View) : RecyclerView.ViewHolder(rootView), View.OnClickListener {
