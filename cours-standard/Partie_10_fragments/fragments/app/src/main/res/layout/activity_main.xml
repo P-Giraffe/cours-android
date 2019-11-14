@@ -7,13 +7,16 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="fr.purplegiraffe.fragments.HomeFragment"
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/main_navigation"
+        app:defaultNavHost="true"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
