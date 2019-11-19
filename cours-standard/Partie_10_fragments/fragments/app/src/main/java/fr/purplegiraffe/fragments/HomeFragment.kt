@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -31,11 +32,21 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_SayHello.setOnClickListener { onButtonClick() }
+        viewModel.loadedShow.observe(this, Observer { show -> updateDisplay(show) })
+    }
+
+    private fun updateDisplay(show: Show?) {
+        if (show != null) {
+            lbl_hello.text = show.name
+        } else {
+            lbl_hello.text = ""
+        }
     }
 
     private fun onButtonClick() {
-        val direction = HomeFragmentDirections.actionHomeFragmentToSettingsFragment("Hello")
-        findNavController().navigate(direction)
+//        val direction = HomeFragmentDirections.actionHomeFragmentToSettingsFragment("Hello")
+//        findNavController().navigate(direction)
+        viewModel.startLoadingShow()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
